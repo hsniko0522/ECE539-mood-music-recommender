@@ -2,6 +2,7 @@
 
 ## Overview:
 This prepares the DEAM dataset and implements baseline models to predict valence and arousal using openSMILE acoustic features.
+**Please use the song_split_ids.csv file in the google drive folder to work with the same train/dev/test splits.**
 
 ## Data Preperation:
 
