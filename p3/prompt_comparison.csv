@@ -1,0 +1,36 @@
+mood,style,prompt_id,prompt,rho_target,rho_valence,rho_arousal,auc_quadrant,hit10_pool,chance_pool,hit10_dev,chance_dev,selected
+Relax,p4_original,Relax__p4_original,"calm, relaxing music",0.1849,-0.3005,-0.3483,0.5715,0.1,0.1059,0.0,0.0933,False
+Relax,activity,Relax__activity,relaxing music for unwinding after a long day,0.1422,-0.2858,-0.3207,0.5543,0.1,0.1059,0.0,0.0933,False
+Relax,acoustic,Relax__acoustic,"slow, soft and peaceful music",0.247,-0.4124,-0.4717,0.5817,0.1,0.1059,0.1,0.0933,False
+Relax,genre,Relax__genre,ambient music with gentle piano and soft synth pads,0.1813,-0.3802,-0.4011,0.515,0.0,0.1059,0.0,0.0933,False
+Relax,scene,Relax__scene,soothing music for a quiet evening at home,0.1841,-0.3682,-0.4118,0.566,0.1,0.1059,0.0,0.0933,False
+Relax,one_word,Relax__one_word,relaxing,0.2548,-0.3035,-0.4123,0.5941,0.0,0.1059,0.1,0.0933,True
+Relax,ensemble,Relax__ensemble,"calm, relaxing music | relaxing music for unwinding after a long day | slow, soft and peaceful music | ambient music with gentle piano and soft synth pads | soothing music for a quiet evening at home | relaxing",0.2091,-0.3615,-0.416,0.5649,0.0,0.1059,0.1,0.0933,False
+Study,p4_original,Study__p4_original,"gentle, unobtrusive music for studying",0.0594,-0.2092,-0.176,0.442,0.1,0.1059,0.0,0.0933,False
+Study,activity,Study__activity,background music for studying and concentrating,0.0498,-0.1504,-0.1525,0.453,0.0,0.1059,0.0,0.0933,False
+Study,acoustic,Study__acoustic,"instrumental music without vocals, steady and calm",0.198,-0.2368,-0.2477,0.5401,0.2,0.1059,0.0,0.0933,True
+Study,genre,Study__genre,lo-fi hip hop beats,0.1648,-0.1108,-0.1519,0.5589,0.2,0.1059,0.0,0.0933,False
+Study,scene,Study__scene,soft piano music for reading in a library,0.1533,-0.3214,-0.3272,0.4684,0.0,0.1059,0.0,0.0933,False
+Study,one_word,Study__one_word,studying,-0.0462,-0.0562,0.0289,0.4256,0.0,0.1059,0.0,0.0933,False
+Study,ensemble,Study__ensemble,"gentle, unobtrusive music for studying | background music for studying and concentrating | instrumental music without vocals, steady and calm | lo-fi hip hop beats | soft piano music for reading in a library | studying",0.1484,-0.2557,-0.2528,0.485,0.2,0.1059,0.0,0.0933,False
+Workout,p4_original,Workout__p4_original,energetic music for exercising,0.1148,0.1127,0.0942,0.5822,0.6,0.3435,0.5,0.2533,False
+Workout,activity,Workout__activity,high-energy music for a workout at the gym,0.1793,0.165,0.1621,0.6141,0.8,0.3435,0.4,0.2533,False
+Workout,acoustic,Workout__acoustic,"fast, loud music with a driving beat",0.4337,0.3443,0.4207,0.7081,0.8,0.3435,0.3,0.2533,False
+Workout,genre,Workout__genre,intense electronic dance music with heavy bass,0.3533,0.299,0.3148,0.6836,0.8,0.3435,0.4,0.2533,False
+Workout,scene,Workout__scene,pumping rock music for running,0.483,0.3991,0.4579,0.7202,0.9,0.3435,0.3,0.2533,True
+Workout,one_word,Workout__one_word,energetic,0.15,0.1776,0.0879,0.6203,0.6,0.3435,0.6,0.2533,False
+Workout,ensemble,Workout__ensemble,"energetic music for exercising | high-energy music for a workout at the gym | fast, loud music with a driving beat | intense electronic dance music with heavy bass | pumping rock music for running | energetic",0.351,0.2998,0.3196,0.6871,0.8,0.3435,0.5,0.2533,False
+Happy,p4_original,Happy__p4_original,"happy, upbeat music",0.088,0.0946,0.0401,0.5445,0.4,0.3435,0.4,0.2533,False
+Happy,activity,Happy__activity,cheerful music for a party with friends,0.4869,0.4337,0.4273,0.7415,0.9,0.3435,0.6,0.2533,True
+Happy,acoustic,Happy__acoustic,"bright, major-key music with a bouncy rhythm",0.2187,0.2233,0.1253,0.6269,0.7,0.3435,0.6,0.2533,False
+Happy,genre,Happy__genre,joyful pop song,0.1493,0.1683,0.0197,0.5699,0.5,0.3435,0.5,0.2533,False
+Happy,scene,Happy__scene,feel-good music for a sunny road trip,0.1243,0.1197,0.0808,0.5516,0.5,0.3435,0.3,0.2533,False
+Happy,one_word,Happy__one_word,happy,0.1441,0.1611,0.046,0.5744,0.6,0.3435,0.3,0.2533,False
+Happy,ensemble,Happy__ensemble,"happy, upbeat music | cheerful music for a party with friends | bright, major-key music with a bouncy rhythm | joyful pop song | feel-good music for a sunny road trip | happy",0.244,0.2397,0.1524,0.6243,0.6,0.3435,0.6,0.2533,False
+Sad,p4_original,Sad__p4_original,"sad, reflective music",0.3892,-0.3266,-0.3634,0.6618,0.8,0.3718,0.6,0.3867,False
+Sad,activity,Sad__activity,melancholic music for being alone on a rainy day,0.4116,-0.3336,-0.3862,0.6725,0.5,0.3718,0.4,0.3867,False
+Sad,acoustic,Sad__acoustic,"slow, minor-key music with mournful strings",0.5446,-0.4668,-0.5041,0.7562,0.9,0.3718,0.8,0.3867,True
+Sad,genre,Sad__genre,sad piano ballad,0.3558,-0.3261,-0.3158,0.6912,0.9,0.3718,0.5,0.3867,False
+Sad,scene,Sad__scene,heartbreaking music for after a breakup,0.22,-0.1629,-0.2242,0.5818,0.5,0.3718,0.4,0.3867,False
+Sad,one_word,Sad__one_word,sad,0.438,-0.3608,-0.4127,0.7295,0.9,0.3718,0.8,0.3867,False
+Sad,ensemble,Sad__ensemble,"sad, reflective music | melancholic music for being alone on a rainy day | slow, minor-key music with mournful strings | sad piano ballad | heartbreaking music for after a breakup | sad",0.4571,-0.3806,-0.4313,0.7132,0.9,0.3718,0.6,0.3867,False

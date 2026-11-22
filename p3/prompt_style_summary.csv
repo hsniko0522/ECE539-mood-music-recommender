@@ -1,0 +1,8 @@
+style,rho_target,auc_quadrant,hit10_pool,hit10_dev,n_times_selected
+acoustic,0.3284,0.6426,0.54,0.36,2
+ensemble,0.2819,0.6149,0.5,0.36,0
+activity,0.2539,0.6071,0.46,0.28,1
+genre,0.2409,0.6037,0.48,0.28,0
+scene,0.2329,0.5776,0.4,0.2,1
+one_word,0.1881,0.5888,0.42,0.36,1
+p4_original,0.1673,0.5604,0.4,0.3,0

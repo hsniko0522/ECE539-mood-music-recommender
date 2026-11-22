@@ -1,0 +1,137 @@
+{
+  "clap_model": "laion/larger_clap_music_and_speech",
+  "sampling_rate": 48000,
+  "window_seconds": 10.0,
+  "min_tail_seconds": 3.0,
+  "song_score": "mean over 10 s windows of cosine(audio window, prompt text)",
+  "score_mode": "centred",
+  "selection": "max Spearman(score, true emotion similarity to P4 target) on train+dev",
+  "split_source": "P1 split and labels via P2 file p2/va_predictions.csv",
+  "moods": {
+    "Relax": {
+      "valence": 6.5,
+      "arousal": 2.5
+    },
+    "Study": {
+      "valence": 5.5,
+      "arousal": 3.0
+    },
+    "Workout": {
+      "valence": 7.0,
+      "arousal": 8.0
+    },
+    "Happy": {
+      "valence": 8.0,
+      "arousal": 6.5
+    },
+    "Sad": {
+      "valence": 2.5,
+      "arousal": 3.0
+    }
+  },
+  "selected": {
+    "Relax": {
+      "style": "one_word",
+      "prompts": [
+        "relaxing"
+      ],
+      "pool_metrics": {
+        "rho_target": 0.2548,
+        "auc_quadrant": 0.5941,
+        "hit10_pool": 0.0,
+        "hit10_dev": 0.1
+      }
+    },
+    "Study": {
+      "style": "acoustic",
+      "prompts": [
+        "instrumental music without vocals, steady and calm"
+      ],
+      "pool_metrics": {
+        "rho_target": 0.198,
+        "auc_quadrant": 0.5401,
+        "hit10_pool": 0.2,
+        "hit10_dev": 0.0
+      }
+    },
+    "Workout": {
+      "style": "scene",
+      "prompts": [
+        "pumping rock music for running"
+      ],
+      "pool_metrics": {
+        "rho_target": 0.483,
+        "auc_quadrant": 0.7202,
+        "hit10_pool": 0.9,
+        "hit10_dev": 0.3
+      }
+    },
+    "Happy": {
+      "style": "activity",
+      "prompts": [
+        "cheerful music for a party with friends"
+      ],
+      "pool_metrics": {
+        "rho_target": 0.4869,
+        "auc_quadrant": 0.7415,
+        "hit10_pool": 0.9,
+        "hit10_dev": 0.6
+      }
+    },
+    "Sad": {
+      "style": "acoustic",
+      "prompts": [
+        "slow, minor-key music with mournful strings"
+      ],
+      "pool_metrics": {
+        "rho_target": 0.5446,
+        "auc_quadrant": 0.7562,
+        "hit10_pool": 0.9,
+        "hit10_dev": 0.8
+      }
+    }
+  },
+  "prompt_bank": {
+    "Relax": {
+      "p4_original": "calm, relaxing music",
+      "activity": "relaxing music for unwinding after a long day",
+      "acoustic": "slow, soft and peaceful music",
+      "genre": "ambient music with gentle piano and soft synth pads",
+      "scene": "soothing music for a quiet evening at home",
+      "one_word": "relaxing"
+    },
+    "Study": {
+      "p4_original": "gentle, unobtrusive music for studying",
+      "activity": "background music for studying and concentrating",
+      "acoustic": "instrumental music without vocals, steady and calm",
+      "genre": "lo-fi hip hop beats",
+      "scene": "soft piano music for reading in a library",
+      "one_word": "studying"
+    },
+    "Workout": {
+      "p4_original": "energetic music for exercising",
+      "activity": "high-energy music for a workout at the gym",
+      "acoustic": "fast, loud music with a driving beat",
+      "genre": "intense electronic dance music with heavy bass",
+      "scene": "pumping rock music for running",
+      "one_word": "energetic"
+    },
+    "Happy": {
+      "p4_original": "happy, upbeat music",
+      "activity": "cheerful music for a party with friends",
+      "acoustic": "bright, major-key music with a bouncy rhythm",
+      "genre": "joyful pop song",
+      "scene": "feel-good music for a sunny road trip",
+      "one_word": "happy"
+    },
+    "Sad": {
+      "p4_original": "sad, reflective music",
+      "activity": "melancholic music for being alone on a rainy day",
+      "acoustic": "slow, minor-key music with mournful strings",
+      "genre": "sad piano ballad",
+      "scene": "heartbreaking music for after a breakup",
+      "one_word": "sad"
+    }
+  },
+  "songs_embedded": 500
+}
