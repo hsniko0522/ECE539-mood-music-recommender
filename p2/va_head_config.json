@@ -1,0 +1,28 @@
+{
+  "mert_model": "m-a-p/MERT-v1-95M",
+  "chunk_seconds": 5.0,
+  "layer": "8",
+  "hp": {
+    "d_hidden": 256,
+    "p_drop": 0.3,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "batch_size": 64,
+    "max_epochs": 400,
+    "patience": 30
+  },
+  "split_source": "P1 split (song_split_ids.csv)",
+  "songs_per_split": {
+    "train": 350,
+    "dev": 75,
+    "test": 75
+  },
+  "dev_metrics": {
+    "valence_r2": 0.4263,
+    "valence_rmse": 0.8167,
+    "arousal_r2": 0.5457,
+    "arousal_rmse": 0.8307,
+    "mean_r2": 0.486
+  },
+  "scale": "DEAM 1-9"
+}
