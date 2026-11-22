@@ -21,7 +21,7 @@ Currently, P1's trained Ridge regression model provides emotion predictions, whi
 
 ## Testing Results
 
-- Successfully generated Ridge model predictions for 75 DEAM development songs.
+- Generated Ridge model predictions for 75 DEAM development songs.
 - Combined real emotion predictions with simulated CLAP similarity scores.
 - All five mood/activity options returned 10 unique recommendations.
 - Automated ranking and input-validation tests passed.
@@ -31,27 +31,14 @@ These tests verify pipeline functionality, not final recommendation quality.
 
 ## Notebook
 
-`ECE539_P4_P1_Integrated.ipynb`
-
-To run in Google Colab:
-
-1. Open the notebook.
-2. Select **Runtime → Run all**.
-3. Upload the following files when prompted:
-   - `deam_combined_500.csv`
-   - `song_split_ids.csv`
-   - `ridge_alpha100.joblib`
-   - `feature_columns.joblib`
-4. Review the recommendations and test results.
-
-The notebook uses the development split for integration testing. The held-out test split remains reserved for final evaluation.
+`ECE539_P4_Integration (2).ipynb`
 
 ## Limitations
 
-- P1's Ridge regression model is currently used as the emotion prediction baseline.
+- P1's Ridge regression model currently serves as the emotion prediction baseline.
 - P2's MERT + MLP predictions have not yet been integrated.
 - P3's CLAP similarity scores are simulated.
-- Recommendation quality cannot yet be evaluated reliably.
+- Recommendation quality has not yet been evaluated using actual CLAP outputs.
 
 ## Next Steps
 
@@ -60,6 +47,6 @@ The notebook uses the development split for integration testing. The held-out te
 3. Verify song ID alignment across model outputs.
 4. Test the complete recommendation pipeline.
 5. Evaluate recommendation quality using mood-hit@10.
-6. Prepare for the final demonstration.
+6. Prepare the integrated system for the final demonstration.
 
 **Status:** In Progress — P1 integration completed and tested; P2 and P3 integration pending.
