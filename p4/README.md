@@ -4,49 +4,65 @@
 
 ## Overview
 
-This module implements the recommendation ranking and interactive interface for the Mood Music Recommender project.
+P4 integrates P2's MERT-based valence/arousal predictions and P3's CLAP audio-text similarity scores into a mood-based music recommendation system.
 
-It combines predicted musical emotion (valence and arousal) with CLAP audio-text similarity scores to rank songs according to a selected mood or activity.
+The system ranks songs for five moods and activities: Relax, Study, Workout, Happy, and Sad.
 
-Currently, P1's trained Ridge regression model provides emotion predictions, while CLAP similarity scores are simulated until P3 integration.
+## Implementation
 
-## Current Implementation
+- Integrated P2's trained MERT + MLP valence/arousal predictions.
+- Integrated P3's real CLAP similarity scores.
+- Matched model outputs using song IDs.
+- Implemented a weighted ranking algorithm combining emotion similarity and CLAP similarity.
+- Tuned the ranking weights using development-set data only.
+- Built an interactive mood-selection dropdown.
+- Implemented top-10 song recommendations and CSV export.
+- Added automated tests for ranking and output validation.
 
-- Integrated P1's trained Ridge regression model for valence/arousal prediction.
-- Implemented a weighted ranking algorithm combining emotion similarity and CLAP-style similarity scores.
-- Created an interactive dropdown with five options: Relax, Study, Workout, Happy, and Sad.
-- Implemented top-10 song recommendations.
-- Added input validation and automated tests.
-- Added CSV export functionality.
+## Ranking Method
 
-## Testing Results
+Emotion similarity is calculated using normalized Euclidean distance between a song's predicted valence/arousal and the target emotion coordinates.
 
-- Generated Ridge model predictions for 75 DEAM development songs.
-- Combined real emotion predictions with simulated CLAP similarity scores.
-- All five mood/activity options returned 10 unique recommendations.
-- Automated ranking and input-validation tests passed.
-- Exported 50 recommendations across the five options.
+CLAP similarity scores are normalized separately for each mood.
 
-These tests verify pipeline functionality, not final recommendation quality.
+The combined ranking score is:
 
-## Notebook
+`score = w × emotion_similarity + (1 − w) × clap_similarity`
 
-`ECE539_P4_Integration (2).ipynb`
+The global weight was selected using mean Spearman rank correlation against ground-truth emotion similarity on the development set.
+
+**Selected weights:**
+- Emotion similarity: 0.90
+- CLAP similarity: 0.10
+
+## Results
+
+- Successfully aligned P2 and P3 predictions for 500 DEAM songs.
+- Used 350 training, 75 development, and 75 held-out test songs.
+- Achieved mean development Spearman correlation of 0.6754 with the combined ranking.
+- P2 emotion-only ranking achieved 0.6600 under the same metric.
+- All five moods produced 10 unique recommendations.
+- All automated ranking tests passed.
+- Exported 50 development-set recommendations.
+
+## Files
+
+- `ECE539_P4_P2_P3_Integrated.ipynb` — integrated recommendation system and interactive interface.
+- `P4_dev_weight_comparison.csv` — development-set ranking weight comparison.
+- `P4_P2_P3_DEV_top10.csv` — top-10 development recommendations for all five moods.
 
 ## Limitations
 
-- P1's Ridge regression model currently serves as the emotion prediction baseline.
-- P2's MERT + MLP predictions have not yet been integrated.
-- P3's CLAP similarity scores are simulated.
-- Recommendation quality has not yet been evaluated using actual CLAP outputs.
+- The ranking weights were selected using development-set labels.
+- The combined model has not been shown to outperform P2 alone on mood-hit@10.
+- Relax and Study remain difficult to distinguish using the available DEAM emotion labels.
+- The held-out test split has not been evaluated.
 
 ## Next Steps
 
-1. Replace P1 Ridge predictions with P2's MERT + MLP predictions.
-2. Integrate actual CLAP similarity scores from P3.
-3. Verify song ID alignment across model outputs.
-4. Test the complete recommendation pipeline.
-5. Evaluate recommendation quality using mood-hit@10.
-6. Prepare the integrated system for the final demonstration.
+1. Evaluate the final ranking method on the held-out test set.
+2. Compare P2-only, P3-only, and combined recommendation performance.
+3. Analyze recommendation quality across the five moods.
+4. Prepare the final system demonstration.
 
-**Status:** In Progress — P1 integration completed and tested; P2 and P3 integration pending.
+**Status:** P2/P3 integration completed and tested. Final evaluation pending.
